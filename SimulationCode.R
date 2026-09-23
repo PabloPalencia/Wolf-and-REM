@@ -809,6 +809,6 @@ resultados_df <- resultados_df %>%
     bias = dens - true_dens,
     relative_bias = (bias / true_dens) * 100,
     coverage = ifelse(
-      (true_dens >= dens - lcl) & 
-        (true_dens <= dens + ucl), 1, 0)
+      (true_dens >= lcl) & 
+        (true_dens <= ucl), 1, 0)
   )
